@@ -1,0 +1,28 @@
+language: en-US
+early_access: false
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!**/*.lock"
+    - "!.github/**"
+  path_instructions:
+    - path: "skills/**/SKILL.md"
+      instructions: |
+        Verify the SKILL.md has frontmatter with name and description.
+        Check that the description includes example user prompts that trigger the skill.
+        Ensure there's a Workflow, Don'ts, and Example section.
+        Prefer concrete, specific instructions over generic ones.
+    - path: "commands/*.md"
+      instructions: |
+        Verify slash command frontmatter (name, description).
+        Confirm it's actionable and not just descriptive.
+chat:
+  auto_reply: true
