@@ -1,0 +1,15 @@
+# Default owners for everything
+*                       @glincker
+
+# Skills - want a music-knowledgeable reviewer
+/skills/                @glincker
+
+# Commands
+/commands/              @glincker
+
+# CI / community files
+/.github/               @glincker
+
+# Once we onboard maintainers, add per-area owners:
+# /skills/mixing/        @glincker @some-mix-engineer
+# /skills/sound-design/  @glincker @some-synth-nerd

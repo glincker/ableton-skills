@@ -1,0 +1,11 @@
+addReviewers: true
+addAssignees: author
+
+reviewers:
+  - glincker
+
+numberOfReviewers: 1
+
+skipKeywords:
+  - wip
+  - draft
