@@ -1,0 +1,47 @@
+name: Lint Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skill frontmatter
+        run: |
+          set -e
+          fail=0
+          for f in skills/*/SKILL.md; do
+            echo "Checking $f"
+            head -1 "$f" | grep -q "^---$" || { echo "  MISSING opening ---"; fail=1; }
+            grep -q "^name:" "$f" || { echo "  MISSING name:"; fail=1; }
+            grep -q "^description:" "$f" || { echo "  MISSING description:"; fail=1; }
+          done
+          exit $fail
+
+      - name: Validate command frontmatter
+        run: |
+          set -e
+          fail=0
+          for f in commands/*.md; do
+            echo "Checking $f"
+            head -1 "$f" | grep -q "^---$" || { echo "  MISSING opening ---"; fail=1; }
+            grep -q "^name:" "$f" || { echo "  MISSING name:"; fail=1; }
+            grep -q "^description:" "$f" || { echo "  MISSING description:"; fail=1; }
+          done
+          exit $fail
+
+      - name: Check no broken links in README
+        run: |
+          set -e
+          for link in $(grep -oE '\[.*?\]\([^)]+\)' README.md | grep -oE '\([^)]+\)' | tr -d '()' | grep -v '^http' | grep -v '^#'); do
+            if [ ! -e "$link" ]; then
+              echo "BROKEN LINK in README: $link"
+              exit 1
+            fi
+          done
