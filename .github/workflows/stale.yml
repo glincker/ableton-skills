@@ -1,0 +1,31 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-issue-stale: 60
+          days-before-issue-close: 14
+          stale-issue-message: |
+            This issue has been quiet for 60 days. Marking it stale.
+            If it's still relevant, drop a comment and we'll keep it open.
+          close-issue-message: |
+            Closing as stale. Reopen with new context anytime.
+          days-before-pr-stale: 30
+          days-before-pr-close: 14
+          stale-pr-message: |
+            This PR has been quiet for 30 days. Anything blocking?
+          close-pr-message: |
+            Closing as stale. Reopen anytime — we merge, we don't ghost.
+          exempt-issue-labels: "pinned,security,roadmap"
+          exempt-pr-labels: "wip,help-wanted"
