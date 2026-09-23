@@ -10,6 +10,7 @@
 [![Commands](https://img.shields.io/badge/slash%20commands-4-blueviolet)](commands/)
 [![Ableton Live](https://img.shields.io/badge/Ableton%20Live-11%2B-orange)](https://www.ableton.com/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Discord](https://img.shields.io/discord/829168897080557579?style=flat&logo=discord&logoColor=white&label=discord&color=5865F2)](https://discord.gg/Ar5pcaZB99)
 
 [Quick install](#quick-install) · [Skills](#the-12-skills) · [Commands](#slash-commands) · [Why](#why-this-exists) · [FAQ](#faq) · [Contributing](CONTRIBUTING.md)
 
@@ -275,6 +276,14 @@ This project is inspired by, and credits, every PR author whose work got closed 
 - ...and many more.
 
 The skill workflows draw from public music-theory and production knowledge: Adler's *The Study of Orchestration*, Persichetti, Mike Senior's *Mixing Secrets*, Bobby Owsinski's *The Mixing Engineer's Handbook*, and the collective wisdom of r/ableton, r/wearethemusicmakers, and r/edmproduction.
+
+---
+
+## Community
+
+Join the GLINR Discord to talk shop with other producers using these skills, ask questions, and follow along as new skills ship. This project has its own forum channel there, #ableton-skills.
+
+<a href="https://discord.gg/Ar5pcaZB99"><img src="https://discord.com/api/guilds/829168897080557579/widget.png?style=banner2" alt="Join the GLINR Discord" /></a>
 
 ---
 
